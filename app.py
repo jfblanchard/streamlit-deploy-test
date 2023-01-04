@@ -1,3 +1,5 @@
+!pip install -Uqq fastbook
+
 import streamlit as st
 from fastai.vision.all import *
 import fastbook
