@@ -6,6 +6,7 @@ fastbook.setup_book()
 
 path = untar_data(URLs.PETS)/'./images'
 
+# functions
 def is_cat(x): 
     return x[0].isupper()
 
@@ -19,8 +20,10 @@ def train_image_classifier(path):
      
      return learn
 
-
-uploaded_file = st.file_uploader("Choose a file")
+# Create UI
+st.write('Simple Slider that computes the cube of a value')
+st.markdown('<h2>Cat/Dog Image Classifier</h2>', unsafe_allow_html=True)  
+uploaded_file = st.file_uploader("Choose an image file of a cat or dog")
 
 if uploaded_file is not None:
      image = Image.open(uploaded_file)
