@@ -21,21 +21,29 @@ def train_image_classifier(path):
      return learn
 
 # Create UI
-st.write('Simple Slider that computes the cube of a value')
-st.markdown('<h2>Cat/Dog Image Classifier</h2>', unsafe_allow_html=True)  
+st.markdown('<h2><center>Cat/Dog Image Classifier</center></h2>', unsafe_allow_html=True)  # or try st.header()
 uploaded_file = st.file_uploader("Choose an image file of a cat or dog")
 
 if uploaded_file is not None:
-     image = Image.open(uploaded_file)
-     st.image(image, caption='Uploaded image')
+    image = Image.open(uploaded_file)
+    st.image(image, caption='Uploaded image')
 
+    st.write('Training...')  # later use tqdm.... Or load the pretrained model
+    learn = train_image_classifier(path)
+    st.write('Done Training')
 
-st.write('Simple Slider that computes the cube of a value')
-x = st.slider('Select a value to cube')
-st.write(x, 'cubed is', x * x * x)
+    is_cat,_,probs = learn.predict(image)
+    st.write(f"Is this a cat?: {is_cat}.")
+    st.write(f"Probability it's a cat: {probs[1].item():.6f}")
 
-if st.button('Say hello'):
-     st.write('Why hello there')
-else:
-     st.write('Goodbye')
+st.write('Have a great day!')
+# Other gui stuff
+# st.write('Simple Slider that computes the cube of a value')
+# x = st.slider('Select a value to cube')
+# st.write(x, 'cubed is', x * x * x)
+
+# if st.button('Say hello'):
+#      st.write('Why hello there')
+# else:
+#      st.write('Goodbye')
     
