@@ -7,10 +7,10 @@ from PIL import Image
 # path = untar_data(URLs.PETS)/'./images'
 
 # should be in current directory
-with open('./text.txt','r') as f:
-    text_text = f.read()
+with open('./test.txt','r') as f:
+    test_text = f.read()
     
-st.write(text_text)
+st.write(test_text)
 
 # functions
 def is_cat(x): 
