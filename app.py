@@ -6,7 +6,8 @@ from PIL import Image
 
 # path = untar_data(URLs.PETS)/'./images'
 
-with open('text.txt','r') as f:
+# should be in current directory
+with open('./text.txt','r') as f:
     text_text = f.read()
     
 st.write(text_text)
