@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="enabledOnReformat" value="true" />
+    <option name="executionMode" value="BINARY" />
+    <option name="pathToExecutable" value="$USER_HOME$/.local/bin/black" />
+    <option name="sdkUUID" value="30189d6c-bf8c-4537-b951-dc31a3df36c1" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="dataspell" project-jdk-type="Python SDK" />
+  <component name="PyCharmDSProjectLayout">
+    <option name="id" value="JupyterRightHiddenStructureLayout" />
+  </component>
+</project>
